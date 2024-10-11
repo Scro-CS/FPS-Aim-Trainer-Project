@@ -1,0 +1,200 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sfps.png" type="Texture" id=1]
+[ext_resource path="res://black background.png" type="Texture" id=2]
+[ext_resource path="res://white bg.png" type="Texture" id=3]
+[ext_resource path="res://playbuttonimg.png" type="Texture" id=4]
+[ext_resource path="res://settingsbuttonimg2.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=6]
+[ext_resource path="res://profilebuttonimg.png" type="Texture" id=7]
+[ext_resource path="res://leaderboardbuttonimg2.png" type="Texture" id=9]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/quit button.png-3c8eae6979ee9578987cb14901d84024.stex"
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 935.0, 286.0, 437.0, 360.0, 352.0, 371.0 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 452.0, 486.0, 790.0, 826.0, 639.0, 142.0, 1136.0 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color( 0.839216, 0.25098, 0.133333, 1 )
+anchor_left = -0.001
+anchor_top = -0.006
+anchor_right = -0.001
+anchor_bottom = -0.006
+margin_left = 1.28
+margin_top = 4.32
+margin_right = 1281.28
+margin_bottom = 724.32
+color = Color( 0.745098, 0.141176, 0.141176, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WhiteBg" type="Sprite" parent="ColorRect"]
+position = Vector2( 641, 365 )
+scale = Vector2( 0.93022, 0.93022 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BlackBackground" type="Sprite" parent="ColorRect"]
+position = Vector2( 645, 355 )
+scale = Vector2( 0.787818, 0.787818 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sfps" type="Sprite" parent="."]
+position = Vector2( 642, 356 )
+scale = Vector2( 0.39825, 0.39825 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -497.0
+margin_top = -74.0
+margin_right = -188.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 200, 150 )
+custom_constants/separation = 20
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Playbuttonimg" type="Sprite" parent="VBoxContainer"]
+position = Vector2( 154.244, 36.25 )
+scale = Vector2( 0.418867, 0.446882 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PlayButton" type="Button" parent="VBoxContainer/Playbuttonimg"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.000299232
+anchor_top = -0.000277266
+anchor_right = 0.00404455
+anchor_bottom = -0.000277266
+margin_left = -368.24
+margin_top = -78.8799
+margin_right = 363.76
+margin_bottom = 66.1201
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": true
+}
+
+[node name="Leaderboardbuttonimg2" type="Sprite" parent="VBoxContainer"]
+position = Vector2( 154.299, 121 )
+scale = Vector2( 0.41873, 0.443418 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LeaderboardButton" type="Button" parent="VBoxContainer/Leaderboardbuttonimg2"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -371.0
+margin_top = -81.0
+margin_right = 367.0
+margin_bottom = 65.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 186.0
+margin_top = -78.0
+margin_right = 496.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 200, 150 )
+custom_constants/separation = 20
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Profilebuttonimg" type="Sprite" parent="VBoxContainer2"]
+position = Vector2( 154.476, 39.6251 )
+scale = Vector2( 0.418288, 0.44515 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ProfileButton" type="Button" parent="VBoxContainer2/Profilebuttonimg"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -369.0
+margin_top = -69.0
+margin_right = 368.0
+margin_bottom = 77.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Settingsbuttonimg2" type="Sprite" parent="VBoxContainer2"]
+position = Vector2( 154.52, 125.43 )
+scale = Vector2( 0.418277, 0.441434 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer2/Settingsbuttonimg2"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -367.0
+margin_top = -81.0
+margin_right = 370.0
+margin_bottom = 65.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="QuitButton2" type="Sprite" parent="."]
+position = Vector2( 1207, 692 )
+scale = Vector2( 0.514999, 0.514999 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Buttonquit" type="Button" parent="QuitButton2"]
+modulate = Color( 0, 0, 0, 0 )
+self_modulate = Color( 0, 0, 0, 0 )
+margin_left = -132.039
+margin_top = -50.4856
+margin_right = 132.961
+margin_bottom = 50.5144
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="button_up" from="VBoxContainer/Playbuttonimg/PlayButton" to="." method="_on_PlayButton_button_up"]
+[connection signal="button_up" from="VBoxContainer2/Profilebuttonimg/ProfileButton" to="." method="_on_ProfileButton_button_up"]
+[connection signal="button_up" from="VBoxContainer2/Settingsbuttonimg2/SettingsButton" to="." method="_on_SettingsButton_button_up"]
+[connection signal="pressed" from="QuitButton2/Buttonquit" to="." method="_on_Buttonquit_pressed"]

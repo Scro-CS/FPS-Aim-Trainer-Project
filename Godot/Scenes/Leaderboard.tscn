@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Leaderboard.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/quit button.png-3c8eae6979ee9578987cb14901d84024.stex"
+
+[node name="Leaderboard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 296, -234 )
+script = ExtResource( 1 )
+
+[node name="QuitButton2" type="Sprite" parent="."]
+position = Vector2( 1207, 692 )
+scale = Vector2( 0.514999, 0.514999 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Buttonquit" type="Button" parent="QuitButton2"]
+modulate = Color( 0, 0, 0, 0 )
+self_modulate = Color( 0, 0, 0, 0 )
+margin_left = -132.039
+margin_top = -50.4856
+margin_right = 132.961
+margin_bottom = 50.5144
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="button_up" from="QuitButton2/Buttonquit" to="." method="_on_Buttonquit_button_up"]
